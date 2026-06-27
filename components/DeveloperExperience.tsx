@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const devFeatures = [
   {
     icon: "🔒",
@@ -37,7 +35,8 @@ export default function DeveloperExperience() {
   return (
     <section className="bg-[#f4f6fb] px-6 py-20 sm:py-24">
       <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
-        {/* <div>
+        {/* Left: copy + feature list */}
+        <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
             Developer Experience
           </p>
@@ -65,17 +64,46 @@ export default function DeveloperExperience() {
               </div>
             ))}
           </div>
-        </div> */}
+        </div>
 
-        {/* Right: terminal mockup — now an SVG asset */}
-        <div className="relative w-full">
-          <Image
-            src="/images/hero.svg"
-            alt="Velox API example: a curl request to create a Pro Plan subscription, returning a 201 Created response"
-            width={500}
-            height={400}
-            className="h-auto w-full rounded-2xl shadow-xl"
-          />
+        {/* Right: terminal mockup */}
+        <div className="rounded-2xl bg-[#0d1117] p-4 font-mono text-sm shadow-xl sm:p-6">
+          <div className="flex items-center gap-2 pb-4">
+            <span className="h-3 w-3 rounded-full bg-red-400" />
+            <span className="h-3 w-3 rounded-full bg-yellow-400" />
+            <span className="h-3 w-3 rounded-full bg-green-400" />
+            <span className="ml-2 text-xs text-gray-500">~ curl example</span>
+          </div>
+
+          <pre className="overflow-x-auto text-xs leading-relaxed text-gray-300 sm:text-sm">
+            <code>
+              {`$ curl https://api.velox.co/v1/plans \\
+  -H "Authorization: Bearer `}
+              <span className="text-orange-400">$VELOX_API_KEY</span>
+              {`" \\
+  -H "Content-Type: application/json" \\
+  -d '{"name": "Pro Plan"}'`}
+            </code>
+          </pre>
+
+          <div className="my-4 border-t border-white/10" />
+
+          <pre className="overflow-x-auto text-xs leading-relaxed sm:text-sm">
+            <code>
+              <span className="text-green-400">HTTP/1.1 201 Created</span>
+              {`
+{
+  "id": "plan_xKp3mNz8qR",
+  "name": "Pro Plan",
+  "status": `}
+              <span className="text-orange-400">"active"</span>
+              {`,
+  "interval": `}
+              <span className="text-orange-400">"monthly"</span>
+              {`
+}`}
+            </code>
+          </pre>
         </div>
       </div>
     </section>
