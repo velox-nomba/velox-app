@@ -1,6 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import DashboardPreview from "@/components/DashboardPreview";
+// import DashboardPreview from "@/components/DashboardPreview";
 import Features from "@/components/Features";
 import BuiltFor from "@/components/BuiltFor";
 import DeveloperExperience from "@/components/DeveloperExperience";
@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
-      <DashboardPreview />
+      {/* <DashboardPreview /> */}
       <Features />
       <BuiltFor />
       <DeveloperExperience />
