@@ -1,5 +1,6 @@
 import styles from "./Hero.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -51,7 +52,7 @@ export default function Hero() {
 
         <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row">
           <button className="w-full rounded-lg bg-white px-6 py-3 text-sm font-medium text-[#0a1c4e] hover:bg-white/90 sm:w-auto flex items-center justify-center gap-1">
-            Get Started
+            <Link href="/signup">Get Started</Link>
             <svg
               width="20"
               height="20"

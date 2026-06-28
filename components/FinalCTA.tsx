@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const trustSignals = [
   { icon: "○", text: "PCI DSS compliant" },
   { icon: "✓", text: "No setup fees" },
@@ -19,7 +21,7 @@ export default function FinalCTA() {
 
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <button className="w-full rounded-full bg-white px-6 py-3 text-sm font-medium text-[#0a1c4e] hover:bg-white/90 sm:w-auto">
-            Create Free Account →
+            <Link href="/signup">Create Free Account →</Link>
           </button>
           <button className="w-full rounded-full border border-white/30 px-6 py-3 text-sm font-medium text-white hover:bg-white/10 sm:w-auto">
             Read Documentation

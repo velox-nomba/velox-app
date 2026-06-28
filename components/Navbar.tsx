@@ -76,13 +76,13 @@ export default function Navbar() {
 
         <div className="flex items-center gap-4">
           <Link
-            href="#"
+            href="/login"
             className={`${styles.login} text-sm text-white/90 hover:text-white`}
           >
             Login
           </Link>
           <Link
-            href="#"
+            href="/signup"
             className={`${styles.signUp} rounded-lg bg-white px-5 py-2 text-sm font-medium text-[#0a1c4e] hover:bg-white/90`}
           >
             Sign Up
